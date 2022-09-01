@@ -1,0 +1,175 @@
+/*main css*/
+html{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url("../assets/img/plymouth.jpg");
+    font-weight: 500;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+main {
+    flex: 1 0 auto;
+}
+.row{
+    padding-top: 100px;
+}
+
+
+.container-fluid {
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+/*cards and links*/
+.card-content{
+    min-height: 200px;
+    text-align: center;
+}
+
+.card {
+    min-height: 250px;
+}
+.card-header{
+    min-height: 50px;
+    background-color: #1976d2;
+    color: white;
+    text-align: center;
+    font-size: 36px;
+}
+
+.card-content-links {
+    text-align: center;
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+.link{
+    margin: 10px;
+    font-size: 30px;
+    transition: color 0.5s ease-in-out;
+}
+
+.link:hover{
+    list-style: none;
+    color: black;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1250px) {
+    div > #context > span, .link {
+        color: black;
+        font-size: 24px;
+    }
+}
+
+div > #context {
+    color: white;
+}
+
+div > #context > .note{
+    font-size: 24px;
+    color: black;
+}
+
+span {
+    font-size: 30px;
+}
+
+#dataset-link{
+    color: white;
+    text-decoration: underline;
+}
+
+div > #context{
+    text-align: center;
+}
+
+
+/*table*/
+th {
+    border: 1px solid black;
+    background-color: rgba(138, 138, 138, 0.45);
+}
+table, td{
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+table {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+/*map*/
+#mapid {
+    width: 850px;
+    height: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*button scrolling*/
+
+
+.to-top {
+    background: white;
+    position: fixed;
+    bottom: 16px;
+    right:32px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:32px;
+    color:#1f1f1f;
+    text-decoration: none;
+    opacity:0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-top.active {
+    bottom:32px;
+    pointer-events: auto;
+    opacity:1;
+}
+
+.to-bottom {
+    background: white;
+    position: fixed;
+    bottom: 16px;
+    right:92px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:32px;
+    color:#1f1f1f;
+    text-decoration: none;
+    opacity:0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-bottom.active {
+    bottom:32px;
+    pointer-events: auto;
+    opacity:1;
+}
+

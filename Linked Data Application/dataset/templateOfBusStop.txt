@@ -1,0 +1,29 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+
+"features": [ 
+	{ "type": "Feature", 
+		"properties": { 
+			"ATCOCODE": "1180PLA10944", 
+			"NAPTANCODE": "plyadad", 
+			"COMMONNAME": "Little Ash Gardens", 
+			"STREET": "Wolseley Road", 
+			"BEARING": "NE", 
+			"LOCALITY": "Saltash Passage", 
+			"PARENT": "Plymouth", 
+			"GRANDPAR": null, 
+			"EASTING": 243625, 
+			"NORTHING": 58380, 
+			"LONGITUDE": -4.201914, 
+			"LATITUTE": 50.404427, 
+			"STOPTYPE": "BCT", 
+			"BUSSTOP": "MKD" }, 
+"geometry": 
+	{ "type": "Point", 
+		"coordinates": [ 
+			-4.201869581883863, 
+			50.404434211723959 ] 
+		} 
+	},
+}

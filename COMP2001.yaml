@@ -1,0 +1,129 @@
+swagger: "2.0"
+info:
+  description: "This is an API that provides the ability to enter student projects using the end points below."
+  version: "1.0.0"
+  title: "COMP2001 Showcase"
+  termsOfService: "http://web.socem.plymouth.ac.uk/shirley/"
+  contact:
+    email: "shirley.atkinson@plymouth.ac.uk"
+  license:
+    name: "CC BY-NC-SA 4.0"
+    url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+host: "web.socem.plymouth.ac.uk"
+basePath: "/shirley/auth/api"
+tags:
+- name: "programmes"
+  description: "All about Programmes"
+schemes:
+- "https"
+- "http"
+paths:
+  /programmes:
+    post:
+      tags:
+      - "programmes"
+      summary: "Create a new Programme"
+      description: "New Programme to be inserted into the system"
+      operationId: "create"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Created programme object"
+        required: true
+        schema:
+          $ref: "#/definitions/programmes"
+      responses:
+        "201":
+          description: "successful operation, returns json object 'ProgrammeCode':0 with programme code number"
+        "208":
+          description: "Call successful, but Programme already exists and so new entry not made"
+        "404":
+          description: "Not Found"
+    get:
+      tags:
+      - "programmes"
+      summary: "Provides view of all programmes"
+      description: ""
+      operationId: "getProgrammes"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "successful operation"
+          
+  /programmes/{code}:
+    put:
+      tags:
+      - "programmes"
+      summary: "Update an existing programme"
+      description: "Can update title of a Programme but not the code"
+      operationId: "updateProgramme"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "code"
+        in: "path"
+        description: "Code of programme to be updated"
+        required: true
+        type: "integer"
+      - in: "body"
+        name: "body"
+        description: "The details for programme"
+        required: true
+        schema:
+          $ref: "#/definitions/programmes"
+      responses:
+        "204":
+          description: "Success"
+        "404":
+          description: "Not Found"
+    delete:
+      tags:
+      - "programmes"
+      summary: "Delete programme"
+      description: "This can only be done by the logged in user."
+      operationId: "deleteprogramme"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "code"
+        in: "path"
+        description: "programme to be deleted"
+        required: true
+        type: "integer"
+      responses:
+        "204":
+          description: "Success"
+         
+securityDefinitions:
+  api_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
+definitions:
+  programmes:
+    type: "object"
+    properties:
+      Title:
+        type: "string"
+      Code:
+        type: "integer"
+  ApiResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      type:
+        type: "string"
+      message:
+        type: "string"
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
