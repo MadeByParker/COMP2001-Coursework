@@ -2,7 +2,7 @@
 
 Results: 70/100
 
-This is the gitub repository in use for the COMP2001 Information Management &amp; Retrieval Module Assessment
+This is the github repository in use for the COMP2001 Information Management &amp; Retrieval Module Assessment
 
 ## Part 1
 
