@@ -21,7 +21,7 @@ The INCLUDED sql files perform the following processes:
 
 A RESTful API developed in C# using the ASP.NET framework for storing details about university programmes. It supports the following HTTP methods: POST, GET, PUT, and DELETE.
 
-The API is a representation of machine to machine communication and the endpoints are as per the swagger file provided for the module. [Swagger output](https://github.com/Plymouth-University/comp2001_assignment-Parker06/blob/main/COMP2001-API-SWAGGER.png)
+The API is a representation of machine to machine communication and the endpoints are as per the swagger file provided for the module. [Swagger output](https://github.com/Parker06/COMP2001-Coursework/blob/main/COMP2001-API-SWAGGER.png)
 
 ## Credits
 
@@ -34,7 +34,7 @@ The API is a representation of machine to machine communication and the endpoint
 
 ### Linked Data Application
 
-It is a linked data application written in PHP that displays a dataset from Plymouth DATA Place. In this case, I have chosen a dataset in geoJSON that contains the locations of all the bus stops in Plymouth. I have minimalised the dataset to 10 randomly chosen locations so the server loads the data quicker - [Template of what one data entry looks like](https://github.com/Plymouth-University/comp2001_assignment-Parker06/blob/main/Linked%20Data%20Application/dataset/templateOfBusStop.txt)
+It is a linked data application written in PHP that displays a dataset from Plymouth DATA Place. In this case, I have chosen a dataset in geoJSON that contains the locations of all the bus stops in Plymouth. I have minimalised the dataset to 10 randomly chosen locations so the server loads the data quicker - [Template of what one data entry looks like](https://github.com/Parker06/COMP2001-Coursework/blob/main/Linked%20Data%20Application/dataset/templateOfBusStop.txt)
 
 The INCLUDED php pages: 
 
